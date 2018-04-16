@@ -1,0 +1,306 @@
+---
+---
+
+@import "{{ site.theme }}";
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #222;
+  max-width: 50em;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  color: #666;
+  text-shadow: 2px 2px 0 #161616, 2px -2px 0 #161616, -2px 2px 0 #161616,
+    -2px -2px 0 #161616, -2px 0 0 #161616, 0 -2px 0 #161616, 0 2px 0 #161616,
+    2px 0 0 #161616;
+}
+nav {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 2em;
+  position: fixed;
+  left: 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  width: 100%;
+}
+nav ul {
+  margin: 0;
+}
+nav ul li {
+  list-style: none;
+}
+* {
+  letter-spacing: 0.015em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0;
+  line-height: 1;
+  display: table;
+  font-family: "Vim", sans-serif;
+}
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em {
+  font-size: 1.5em;
+}
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+p {
+  color: #666;
+  font-size: 17.5px;
+  font-weight: 400;
+  max-width: 48em;
+  line-height: 1.333;
+  display: table;
+}
+p + p {
+  margin-top: 2em;
+}
+p em {
+  padding: 0 0.3em;
+  margin: 0 -0.2em;
+}
+h3,
+strong {
+  font-weight: normal;
+  border-radius: 2px;
+  color: #666;
+  text-shadow: 2px 2px 0 #050505, 2px -2px 0 #050505, -2px 2px 0 #050505,
+    -2px -2px 0 #050505, -2px 0 0 #050505, 0 -2px 0 #050505, 0 2px 0 #050505,
+    2px 0 0 #050505;
+  padding: 0 0.3em;
+  margin: 0 -0.2em;
+  letter-spacing: 0.05em;
+}
+.hidden {
+  opacity: 0;
+  -webkit-transform: translateX(300%);
+  -ms-transform: translateX(300%);
+  transform: translateX(300%);
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+* > em,
+p a {
+  font-style: inherit;
+  color: rgba(0, 255, 238, 0.4);
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-shadow: 2px 2px 0 #0e0e0e, 2px -2px 0 #0e0e0e, -2px 2px 0 #0e0e0e,
+    -2px -2px 0 #0e0e0e, -2px 0 0 #0e0e0e, 0 -2px 0 #0e0e0e, 0 2px 0 #0e0e0e,
+    2px 0 0 #0e0e0e;
+}
+*:hover > em,
+p a:hover {
+  color: #afff41;
+  text-shadow: 2px 2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    -2px -2px 0 #000, -2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000;
+  -webkit-transition: color 0.4s ease, text-shadow 0.4s ease;
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+p a {
+  display: inline-block;
+  padding: 0 0.3em;
+  margin: 0 -0.2em;
+  text-decoration: none;
+}
+p a[href$=".pdf"] {
+  position: relative;
+  background-color: #161616;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  padding: 0.666em 1em;
+  font-family: "Vim", sans-serif;
+  -webkit-transition: color 0.4s ease, border 0.4s ease,
+    background-color 0.4s ease, text-shadow 0.4s ease;
+  transition: color 0.4s ease, border 0.4s ease, background-color 0.4s ease,
+    text-shadow 0.4s ease;
+}
+p a[href$=".pdf"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: solid 0 #161616;
+  border-left: solid 0 #222;
+  will-change: border;
+  -webkit-transition: border 0.4s ease;
+  transition: border 0.4s ease;
+}
+p a[href$=".pdf"]:hover {
+  background-color: #000;
+  text-shadow: 2px 2px 0 #222, 2px -2px 0 #222, -2px 2px 0 #222,
+    -2px -2px 0 #222, -2px 0 0 #222, 0 -2px 0 #222, 0 2px 0 #222, 2px 0 0 #222;
+}
+p a[href$=".pdf"]:hover::before {
+  border-left-width: 0.875em;
+  border-bottom-width: 0.875em;
+}
+blockquote p {
+  position: relative;
+}
+blockquote p::before {
+  content: "“";
+  position: absolute;
+  right: 100%;
+}
+blockquote p::after {
+  content: "”";
+  position: absolute;
+}
+blockquote cite strong {
+  font-style: normal;
+}
+@-webkit-keyframes opacityPulse {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+@keyframes opacityPulse {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+@-webkit-keyframes colorPulse {
+  from {
+    color: rgba(0, 255, 238, 0.4);
+  }
+  to {
+    color: #afff41;
+  }
+}
+@keyframes colorPulse {
+  from {
+    color: rgba(0, 255, 238, 0.4);
+  }
+  to {
+    color: #afff41;
+  }
+}
+@-webkit-keyframes pulseMove {
+  from {
+    -webkit-transform: rotate(0.5deg) translateX(2px) translateY(0.5px);
+    transform: rotate(0.5deg) translateX(2px) translateY(0.5px);
+    -webkit-transform-origin: 25% 75%;
+    transform-origin: 25% 75%;
+    opacity: 0.8;
+  }
+  to {
+    -webkit-transform: rotate(-0.5deg) translateX(-2px) translateY(-0.5px);
+    transform: rotate(-0.5deg) translateX(-2px) translateY(-0.5px);
+    -webkit-transform-origin: 75% 25%;
+    transform-origin: 75% 25%;
+    opacity: 0.1;
+  }
+}
+@keyframes pulseMove {
+  from {
+    -webkit-transform: rotate(0.5deg) translateX(2px) translateY(0.5px);
+    transform: rotate(0.5deg) translateX(2px) translateY(0.5px);
+    -webkit-transform-origin: 25% 75%;
+    transform-origin: 25% 75%;
+    opacity: 0.8;
+  }
+  to {
+    -webkit-transform: rotate(-0.5deg) translateX(-2px) translateY(-0.5px);
+    transform: rotate(-0.5deg) translateX(-2px) translateY(-0.5px);
+    -webkit-transform-origin: 75% 25%;
+    transform-origin: 75% 25%;
+    opacity: 0.1;
+  }
+}
+.main--section {
+  min-height: calc(100vh - 2em);
+  overflow: hidden;
+  background-image: url(../img/ocean.jpg);
+  background-attachment: fixed;
+}
+.main--section::before,
+.main--section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  left: 10px;
+  top: 18em;
+  min-width: 6em;
+  height: 20em;
+  margin: 0 auto;
+  background-image: url(../img/ocean.jpg);
+  background-attachment: fixed;
+}
+.main--section .section--title,
+.main--section .section--content {
+  padding: 1em 30px;
+}
+.main--section.section__intro {
+  z-index: 3;
+}
+.main--section.section__intro .title {
+  background-image: url(../img/ocean.jpg);
+  position: fixed;
+  margin: 0 auto;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  padding: 0;
+  box-shadow: 0 0 0.5em 0.5em #161616;
+}
+.main--section.section__intro .title .title--wrap {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.main--section.section__intro .content {
+  margin-top: 6em;
+}
+.main--section:not(.section__intro) .title .title--wrap {
+  max-width: 50em;
+  margin: 6em auto 0;
+}
+.main--section:not(.section__intro) .title h2 {
+  font-size: 30px;
+  position: relative;
+  margin-top: 0;
+  font-style: italic;
+  margin: 0;
+}
+.main--section:not(.section__intro) p {
+  font-weight: bold;
+  color: #666;
+}
+.main--section .section--content {
+  background-color: #222;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  position: relative;
+  z-index: 2;
+}
