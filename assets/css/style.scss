@@ -148,7 +148,11 @@ p a[href$=".pdf"]:hover::before {
   border-left-width: 0.875em;
   border-bottom-width: 0.875em;
 }
+blockquote {
+  border: none;
+}
 blockquote p {
+  font-style: normal;
   position: relative;
 }
 blockquote p::before {
