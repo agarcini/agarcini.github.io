@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import '{{ site.theme }}';
 * {
   box-sizing: border-box;
 }
@@ -13,9 +13,7 @@ body {
   margin: 0 auto;
   padding: 0;
   color: #666;
-  text-shadow: 2px 2px 0 #161616, 2px -2px 0 #161616, -2px 2px 0 #161616,
-    -2px -2px 0 #161616, -2px 0 0 #161616, 0 -2px 0 #161616, 0 2px 0 #161616,
-    2px 0 0 #161616;
+  text-shadow: 2px 2px 0 #161616, 2px -2px 0 #161616, -2px 2px 0 #161616, -2px -2px 0 #161616, -2px 0 0 #161616, 0 -2px 0 #161616, 0 2px 0 #161616, 2px 0 0 #161616;
 }
 nav {
   font-weight: 900;
@@ -24,8 +22,8 @@ nav {
   position: fixed;
   left: 0;
   -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   width: 100%;
 }
 nav ul {
@@ -85,9 +83,7 @@ strong {
   font-weight: normal;
   border-radius: 2px;
   color: #666;
-  text-shadow: 2px 2px 0 #050505, 2px -2px 0 #050505, -2px 2px 0 #050505,
-    -2px -2px 0 #050505, -2px 0 0 #050505, 0 -2px 0 #050505, 0 2px 0 #050505,
-    2px 0 0 #050505;
+  text-shadow: 2px 2px 0 #050505, 2px -2px 0 #050505, -2px 2px 0 #050505, -2px -2px 0 #050505, -2px 0 0 #050505, 0 -2px 0 #050505, 0 2px 0 #050505, 2px 0 0 #050505;
   padding: 0 0.3em;
   margin: 0 -0.2em;
   letter-spacing: 0.05em;
@@ -95,8 +91,8 @@ strong {
 .hidden {
   opacity: 0;
   -webkit-transform: translateX(300%);
-  -ms-transform: translateX(300%);
-  transform: translateX(300%);
+      -ms-transform: translateX(300%);
+          transform: translateX(300%);
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
@@ -108,15 +104,12 @@ p a {
   transition: color 0.4s ease;
   letter-spacing: 0.05em;
   cursor: pointer;
-  text-shadow: 2px 2px 0 #0e0e0e, 2px -2px 0 #0e0e0e, -2px 2px 0 #0e0e0e,
-    -2px -2px 0 #0e0e0e, -2px 0 0 #0e0e0e, 0 -2px 0 #0e0e0e, 0 2px 0 #0e0e0e,
-    2px 0 0 #0e0e0e;
+  text-shadow: 2px 2px 0 #0e0e0e, 2px -2px 0 #0e0e0e, -2px 2px 0 #0e0e0e, -2px -2px 0 #0e0e0e, -2px 0 0 #0e0e0e, 0 -2px 0 #0e0e0e, 0 2px 0 #0e0e0e, 2px 0 0 #0e0e0e;
 }
 *:hover > em,
 p a:hover {
   color: #afff41;
-  text-shadow: 2px 2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
-    -2px -2px 0 #000, -2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000;
+  text-shadow: 2px 2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, -2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, 2px 0 0 #000;
   -webkit-transition: color 0.4s ease, text-shadow 0.4s ease;
   transition: color 0.4s ease, text-shadow 0.4s ease;
 }
@@ -133,10 +126,8 @@ p a[href$=".pdf"] {
   margin-right: 0.1em;
   padding: 0.666em 1em;
   font-family: "Vim", sans-serif;
-  -webkit-transition: color 0.4s ease, border 0.4s ease,
-    background-color 0.4s ease, text-shadow 0.4s ease;
-  transition: color 0.4s ease, border 0.4s ease, background-color 0.4s ease,
-    text-shadow 0.4s ease;
+  -webkit-transition: color 0.4s ease, border 0.4s ease, background-color 0.4s ease, text-shadow 0.4s ease;
+  transition: color 0.4s ease, border 0.4s ease, background-color 0.4s ease, text-shadow 0.4s ease;
 }
 p a[href$=".pdf"]::before {
   content: "";
@@ -151,8 +142,7 @@ p a[href$=".pdf"]::before {
 }
 p a[href$=".pdf"]:hover {
   background-color: #000;
-  text-shadow: 2px 2px 0 #222, 2px -2px 0 #222, -2px 2px 0 #222,
-    -2px -2px 0 #222, -2px 0 0 #222, 0 -2px 0 #222, 0 2px 0 #222, 2px 0 0 #222;
+  text-shadow: 2px 2px 0 #222, 2px -2px 0 #222, -2px 2px 0 #222, -2px -2px 0 #222, -2px 0 0 #222, 0 -2px 0 #222, 0 2px 0 #222, 2px 0 0 #222;
 }
 p a[href$=".pdf"]:hover::before {
   border-left-width: 0.875em;
@@ -172,70 +162,6 @@ blockquote p::after {
 }
 blockquote cite strong {
   font-style: normal;
-}
-@-webkit-keyframes opacityPulse {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 0.1;
-  }
-}
-@keyframes opacityPulse {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 0.1;
-  }
-}
-@-webkit-keyframes colorPulse {
-  from {
-    color: rgba(0, 255, 238, 0.4);
-  }
-  to {
-    color: #afff41;
-  }
-}
-@keyframes colorPulse {
-  from {
-    color: rgba(0, 255, 238, 0.4);
-  }
-  to {
-    color: #afff41;
-  }
-}
-@-webkit-keyframes pulseMove {
-  from {
-    -webkit-transform: rotate(0.5deg) translateX(2px) translateY(0.5px);
-    transform: rotate(0.5deg) translateX(2px) translateY(0.5px);
-    -webkit-transform-origin: 25% 75%;
-    transform-origin: 25% 75%;
-    opacity: 0.8;
-  }
-  to {
-    -webkit-transform: rotate(-0.5deg) translateX(-2px) translateY(-0.5px);
-    transform: rotate(-0.5deg) translateX(-2px) translateY(-0.5px);
-    -webkit-transform-origin: 75% 25%;
-    transform-origin: 75% 25%;
-    opacity: 0.1;
-  }
-}
-@keyframes pulseMove {
-  from {
-    -webkit-transform: rotate(0.5deg) translateX(2px) translateY(0.5px);
-    transform: rotate(0.5deg) translateX(2px) translateY(0.5px);
-    -webkit-transform-origin: 25% 75%;
-    transform-origin: 25% 75%;
-    opacity: 0.8;
-  }
-  to {
-    -webkit-transform: rotate(-0.5deg) translateX(-2px) translateY(-0.5px);
-    transform: rotate(-0.5deg) translateX(-2px) translateY(-0.5px);
-    -webkit-transform-origin: 75% 25%;
-    transform-origin: 75% 25%;
-    opacity: 0.1;
-  }
 }
 .main--section {
   min-height: calc(100vh - 2em);
